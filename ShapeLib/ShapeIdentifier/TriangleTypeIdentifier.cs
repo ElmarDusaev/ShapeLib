@@ -3,8 +3,8 @@
 namespace ShapeLib.ShapeIdentifier
 {
     /// <summary>
-    /// Класс для опеределения тира треугольника
-    /// Треугольники бывают остроугольные, прямоугольный, тупоугольный
+    /// Класс для опеределения типа треугольника
+    /// Треугольники бывают: остроугольные, прямоугольный, тупоугольный
     /// </summary>
     internal class TriangleTypeIdentifier : ICanIdentifyType<Triangle>
     {

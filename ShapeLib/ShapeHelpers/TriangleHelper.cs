@@ -47,9 +47,9 @@ namespace ShapeLib.ShapeHelpers
         }
 
         /// <summary>
-        /// Проверка треугольника
+        /// Проверка сторон треугольника
         /// </summary>
-        /// <exception cref="ArgumentException">Incorrect side parameters</exception>
+        /// <exception cref="ArgumentException">Incorrect parameters</exception>
         /// <exception cref="ArithmeticException">Incorrect parameters, data overflow</exception>
         private void CheckTriangle()
         {
@@ -57,11 +57,11 @@ namespace ShapeLib.ShapeHelpers
             if (Shape.A <= 0 || Shape.B <= 0 || Shape.C <= 0)
                 throw new ArgumentException("One of the parameters is 0 or less");
 
-            // Проверка сторон треугольника, должны выполняться уловия с < a + b, c > a - b (где c > а > b)
+            // Проверка сторон треугольника, должны выполняться условия: с < a + b, c > a - b (где c > а > b)
             if (Shape.C > Shape.A + Shape.B || Shape.C < Shape.A - Shape.B)
-                throw new ArgumentException("Incorrect side parameters for triangle");
+                throw new ArgumentException("Incorrect parameters for triangle");
 
-            // Проверка на перепронение
+            // Проверка на переполнения
             if(
                 double.IsInfinity(Math.Pow(Shape.A, 2)) ||
                 double.IsInfinity(Math.Pow(Shape.B, 2)) ||

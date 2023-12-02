@@ -8,6 +8,9 @@ namespace ShapeLib.ShapeHelpers
     /// <typeparam name="TShape">Фигура</typeparam>
     abstract class BaseHelper<TShape>
     {
+        /// <summary>
+        /// Фигура
+        /// </summary>
         protected TShape Shape;
         protected ICanIdentifyType<TShape> TypeIdentifier { get; set; }
 
