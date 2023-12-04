@@ -4,7 +4,7 @@ namespace ShapeLib.ShapeIdentifier
 {
     /// <summary>
     /// Класс для опеределения типа треугольника
-    /// Треугольники бывают: остроугольные, прямоугольный, тупоугольный
+    /// Треугольники бывают: остроугольный, прямоугольный, тупоугольный
     /// </summary>
     internal class TriangleTypeIdentifier : ICanIdentifyType<Triangle>
     {
@@ -14,21 +14,22 @@ namespace ShapeLib.ShapeIdentifier
         /// </summary>
         /// <param name="triangle">Треугольник</param>
         /// <returns>Тип фигуры</returns>
-        public ShapeType Identify(Triangle triangle)
+        public string Identify(Triangle triangle)
         {
             double sumPowSideAB = Math.Pow(triangle.A, 2) + Math.Pow(triangle.B, 2);
             double powSideC = Math.Pow(triangle.C, 2);
             
-            ShapeType shapeType = ShapeType.none;
+            string shapeType = string.Empty;
 
+            //прямоугольный
             if (sumPowSideAB == powSideC)
-                shapeType = ShapeType.TriangleRight;
-
+                shapeType = TriangleType.RIGHT_TRIANGLE;
+            //тупоугольный
             else if (sumPowSideAB < powSideC)
-                shapeType = ShapeType.TriangleObtuse;
-
+                shapeType = TriangleType.OBTUSE_TRIANGLE;
+            //остроугольные
             else if (sumPowSideAB > powSideC)
-                shapeType = ShapeType.TriangleAcute;
+                shapeType = TriangleType.ACUTE_TRIANGLE;
 
             return shapeType;
 

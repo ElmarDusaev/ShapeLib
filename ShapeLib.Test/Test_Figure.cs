@@ -2,6 +2,8 @@ namespace ShapeLib.Test
 {
     public class Test_Figure
     {
+
+        
         /// <summary>
         /// Тестируем метод на прямоугольный труегольник
         /// </summary>
@@ -15,7 +17,7 @@ namespace ShapeLib.Test
         public void IdentifyTriangle_ShouldReturnRight(double a, double b, double c)
         {
             var result = Figure.IdentifyTriangle(a, b, c);
-            Assert.Equal(ShapeType.TriangleRight, result);
+            Assert.Equal(TriangleType.RIGHT_TRIANGLE, result);
         }
 
 
@@ -32,7 +34,7 @@ namespace ShapeLib.Test
         public void IdentifyTriangle_ShouldReturnAcute(double a, double b, double c)
         {
             var result = Figure.IdentifyTriangle(a, b, c);
-            Assert.Equal(ShapeType.TriangleAcute, result);
+            Assert.Equal(TriangleType.ACUTE_TRIANGLE, result);
         }
 
         /// <summary>
@@ -47,7 +49,7 @@ namespace ShapeLib.Test
         public void IdentifyTriangle_ShouldReturnObtuse(double a, double b, double c)
         {
             var result = Figure.IdentifyTriangle(a, b, c);
-            Assert.Equal(ShapeType.TriangleObtuse, result);
+            Assert.Equal(TriangleType.OBTUSE_TRIANGLE, result);
         }
 
         /// <summary>

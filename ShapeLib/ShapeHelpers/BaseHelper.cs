@@ -29,7 +29,7 @@ namespace ShapeLib.ShapeHelpers
         /// Метод определения типа фигуры
         /// </summary>
         /// <returns>Тип фигуры</returns>
-        public virtual ShapeType Identify()
+        public virtual string Identify()
         {
             return TypeIdentifier.Identify(Shape);
         }

@@ -16,7 +16,7 @@ namespace ShapeLib
         /// <param name="b">Сторона B</param>
         /// <param name="c">Сторона C</param>
         /// <returns>Тип фигуры</returns>
-        public static ShapeType IdentifyTriangle(double a, double b, double c)
+        public static string IdentifyTriangle(double a, double b, double c)
         {
             Triangle triangle = new Triangle { A = a, B = b, C = c };
             TriangleTypeIdentifier identifier = new TriangleTypeIdentifier();

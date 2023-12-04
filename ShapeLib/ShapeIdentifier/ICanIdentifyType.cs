@@ -6,6 +6,6 @@
     /// <typeparam name="TShape"></typeparam>
     internal interface ICanIdentifyType<TShape>
     {
-        ShapeType Identify(TShape figure);
+        string Identify(TShape figure);
     }
 }
